@@ -1,0 +1,28 @@
+mat-sidenav-container{
+    height: 87vh;
+    overflow: hidden;
+  }
+  mat-sidenav{
+  width: 200px;  
+  color:bisque;
+  background-color: #c9edc9;
+}
+.navbar{
+  justify-content: space-between;
+}
+.space{
+  padding-left: 2rem;
+}
+mat-grid-tile {
+  background: lightblue;
+}
+mat-grid-list{
+  margin: 4rem;
+}
+mat-sidenav-content{
+background-color: #d3d0d0;
+}
+mat-toolbar{
+  background-color: #1b2221;
+  color: #d3d0d0;
+}

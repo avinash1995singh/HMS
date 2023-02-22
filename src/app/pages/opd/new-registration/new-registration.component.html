@@ -1,0 +1,190 @@
+<section class="hospital">
+  <h4 class="text-center modal-title">Add/edit OPD Records</h4>
+  <hr>
+  <form class="form-setup" [formGroup]="opdForm" (ngSubmit)="saveOpdRecords()">
+    <div class="form-row">
+      <div class="d-flex gap-3">
+        <div class="form-group col-md-3">
+          <label for="inputState" class="p-2">UHID</label>
+          <input type="number" class="form-control form-control-sm" id="inputCity" placeholder="UHID" readonly formControlName="UHID">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputState" class="p-2">Token</label>
+          <input type="number"  class="form-control form-control-sm" id="inputCity" placeholder="Token" readonly formControlName="Token">
+        </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Date</label>
+      <input type="text"  class="form-control form-control-sm"   readonly formControlName="CRDate">
+    </div>
+ 
+    <div class="form-group col-md-2">
+      <label for="appt" class="p-2">Time</label>
+
+<input type="text" id="appt" name="appt" class="form-control form-control-sm"
+[(ngModel)]="cTime" readonly formControlName="Time">
+      
+    </div>
+  </div>
+ 
+  </div> 
+  <div class="form-row">
+    <div class="d-flex gap-5"> 
+      <div class="form-group col-md-5">
+        <label for="inputState" class="p-2">Department</label>
+    <select id="inputState" class="form-control form-control-sm" formControlName="Department" (change)="getConsultant($event)">
+    <option selected>-Select-</option>
+    <option *ngFor="let d of department" >{{d.name}}</option>
+    </select>
+      </div> 
+    <div class="form-group col-md-5">
+    <label for="inputState" class="p-2">Counsultant</label>
+    <select id="inputState" class="form-control form-control-sm" formControlName="Counsultant"  (change)="selectDoctor($event)" >
+      <option selected>-Select-</option>
+      <option *ngFor="let c of filterConsultent">{{c.DoctorName}}</option>
+      <!-- <option *ngFor="let d of department">{{d.name}}</option> -->
+    </select>
+  </div> 
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-4">  
+    <div class="form-group col-md-4">
+      <label for="inputCity" class="p-2">Patient Name</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="PatientName" formControlName="PatientName">
+    </div><div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Age</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Age" formControlName="age">
+    </div>
+<div class="form-group col-md-3">
+   <label for="inputState" class="p-2">Gender</label>
+      <select id="inputState" class="form-control form-control-sm" formControlName="Gender">
+        <option selected>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+</div>
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-3">  
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Adhar number</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Adhar number" formControlName="Adharnumber">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Relation W.P</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Relation W.P" formControlName="Relation">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">F/H Name</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="FatherName" formControlName="F_H_Name">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputDiagnosis" class="p-2">Diagnosis</label>
+      <input type="text" class="form-control form-control-sm" id="inputDiagnosis" placeholder="Diagnosis" formControlName="Diagnosis">
+    </div>
+  
+
+  </div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-4">  
+    <div class="form-group col-md-4">
+      <label for="inputCity" class="p-2">Complate Address</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Complate Address" formControlName="complateAddress">
+    </div><div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Email</label>
+      <input type="email" class="form-control form-control-sm" id="inputCity" placeholder="Email" formControlName="Email">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Mobile</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Mobile" formControlName="Mobile">
+    </div>
+</div>
+</div>
+
+<div class="form-row">
+  <div class="d-flex gap-3">  
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">Temparature</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Temparature" formControlName="Temparature">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Weight</label>
+      <input type="number" class="form-control form-control-sm" id="inputCity" placeholder="Weight" formControlName="Weight">
+    </div>
+
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">BP</label>
+      <input type="number" class="form-control form-control-sm" id="inputCity" placeholder="BP" formControlName="BP">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputState" class="p-2">Cons Type</label>
+      <select id="inputState" class="form-control form-control-sm" formControlName="consType" (change)="consType($event)"  >
+        <option selected>-Select-</option>
+        <option selected>General Visit</option>
+        <option selected>Emergency Visit</option>
+        <option selected>Night Visit</option>
+        <!-- <option *ngFor="let d of department">{{d.name}}</option> -->
+      </select>
+    </div>
+   
+   
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-3">  
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">Charges</label>
+      <input type="number" class="form-control form-control-sm" id="inputCity" placeholder="charges" [(ngModel)]="Charges" formControlName="charges">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputState" class="p-2">Discount By.</label>
+      <select id="inputState" class="form-control form-control-sm" formControlName="DiscountBY">
+        <option selected>-Select-</option>
+        <option >Doctor Discount</option>
+        <option >Staff Discount</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Remarks</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Discount Amount"  formControlName="remarks">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Discount Amount</label>
+      <input type="number" class="form-control form-control-sm" id="inputCity" placeholder="Discount Amount" (keyup)="discountAmount($event)" formControlName="DiscountAmount">
+    </div>
+   
+   
+   
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-3"> 
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">Net Amount</label>
+      <input type="number" class="form-control form-control-sm" id="inputCity" placeholder="Net Amount" [(ngModel)]="Charges" formControlName="NetAmount">
+    </div> 
+    <div class="form-group col-md-3">
+      <label for="inputState" class="p-2">Paymant Mode</label>
+      <select id="inputState" class="form-control form-control-sm" formControlName="paymentMode">
+        <option selected>-Select-</option>
+        <option >Cash</option>
+        <option >Online</option>
+      </select>
+    </div>
+
+   
+</div>
+</div>
+      <div class="  d-flex gap-3 p-2">
+        <button mat-dialog-close class="btn btn-white"  >Close</button>
+        <button type="submit" class="btn btn-success"  >Submit</button>
+      </div>
+      
+    </form> 
+  
+    <button  (click)="print()" class="btn btn-success">Print</button>
+    <app-pdf #Pdf></app-pdf>
+  </section>

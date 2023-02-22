@@ -1,0 +1,40 @@
+<mat-toolbar class="navbar">
+  <div>My Application</div>
+ <div >
+
+<button mat-button class="space" [matMenuTriggerFor]="user">User</button>
+
+<mat-menu #user="matMenu">
+  <button mat-menu-item>logout</button>
+  <button mat-menu-item routerLink="user/profile">Profile</button>
+</mat-menu>
+ </div>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-toolbar>
+      <div>My Application</div>
+    </mat-toolbar>
+    <mat-sidenav #sidenav mode="side">
+      <mat-list role="list">
+        <a mat-list-item role="listitem" routerLink="admin">Admin</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item role="listitem" routerLink="opd">OPD</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item role="listitem" routerLink="Ipd">IPD</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item role="listitem" routerLink="bills">Bills</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item role="listitem" routerLink="reports">Reports</a>
+        <mat-divider></mat-divider>
+      </mat-list>
+   
+    </mat-sidenav>
+    <mat-sidenav-content>
+    
+        <button mat-icon-button color="primary" (click)="sidenav.toggle()"> <mat-icon>menu</mat-icon> </button>
+      
+      <router-outlet></router-outlet>
+
+    
+    </mat-sidenav-content>
+  </mat-sidenav-container>

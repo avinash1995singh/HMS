@@ -1,0 +1,15 @@
+::ng-deep mat-form-field{
+    width:50%;
+    /* height: 4.5rem; */
+   
+ }
+
+ .form-c{
+    background-color: white;
+ }
+
+ section{
+   height: 640px;
+   width: 820px;
+   padding: .5rem;
+}

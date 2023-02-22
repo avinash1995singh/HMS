@@ -1,0 +1,118 @@
+<section class="hospital">
+<h4 class="text-center modal-title">Hospital Details</h4>
+<hr>
+<form class="form-setup" [formGroup]="hospitalDetails" (ngSubmit)="saveHospitalDetails()">
+    <div class="form-row">
+      <div class="d-flex gap-3">
+      <div class="form-group col-md-5 ">
+        <label for="inputEmail4" class="p-2">Hospital Name</label>
+        <input type="text" class="form-control form-control-sm"  placeholder="Hospital Name" formControlName="hospitalName">
+      </div>
+      <div class="form-group col-md-5 ">
+        <label for="inputEmail4"class="p-2">Pathology Name</label>
+        <input type="text" class="form-control form-control-sm"  placeholder="Pathology Name" formControlName="pathologyName">
+      </div>
+    </div>
+    </div>
+<div class="d-flex gap-3">
+    <div class="form-group col-md-7">
+      <label for="inputAddress2" class="p-2"> Complate Address </label>
+      <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Complate Address" formControlName="hospitalAddress" >
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputState" class="p-2">Country</label>
+      <select id="inputState" class="form-control form-control-sm" formControlName="country">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+  </div>
+
+    <div class="form-row">
+        <div class="d-flex gap-2">
+     
+      <div class="form-group col-md-4">
+        <label for="inputState" class="p-2">State</label>
+        <select id="inputState" class="form-control form-control-sm" formControlName="state">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="inputCity" class="p-2">City</label>
+        <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="city" formControlName="city">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="inputZip" class="p-2">Pincode</label>
+        <input type="text" class="form-control form-control-sm" id="inputZip" placeholder="Pincode" formControlName="pincode">
+      </div>
+    </div>
+   
+    </div>  
+    <div class="form-row">
+        <div class="d-flex gap-2">
+            <div class="form-group col-md-4">
+                <label for="inputEmail4" class="p-2">Phone Number</label>
+                <input type="text" class="form-control form-control-sm"  placeholder="Phone Number" formControlName="hospitalPhone">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputEmail4" class="p-2">Mobile Number</label>
+                <input type="text" class="form-control form-control-sm"  placeholder="Mobile Number" formControlName="hospitalMobile">
+              </div>
+                 <div class="form-group col-md-3">
+            <label for="inputPassword4" class="p-2">Email</label>
+            <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Email" formControlName="hospitalEmail">
+          </div>
+        </div>
+    <div class="d-flex gap-3">
+     
+          <div class="form-group col-md-4">
+            <label for="inputPassword4" class="p-2">Website</label>
+            <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Website" formControlName="hospitalweb">
+          </div>
+           <div class="form-group col-md-6">
+        <label for="inputPassword4" class="p-2">OPD valid Days</label>
+        <input type="text" class="form-control form-control-sm"  placeholder="OPD valid Days" formControlName="opdValidDays">
+      </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="d-flex gap-3">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4" class="p-2"> Hospital Reg. No.</label>
+                <input type="text" class="form-control form-control-sm"  placeholder="Hospital Reg. No." formControlName="hospitalRegNo">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputEmail4" class="p-2"> Hospital Reg. Date</label>
+                <input type="date" class="form-control form-control-sm" formControlName="HospitalRegDate"  >
+              </div>
+        </div>
+     
+    <div class="d-flex gap-3">
+    <div class="form-group col-md-4">
+        <label for="inputEmail4" class="p-2">Pan Number</label>
+        <input type="text" class="form-control form-control-sm"  placeholder="Pan Number" formControlName="hospitalPan">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4" class="p-2">GST Number</label>
+        <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="GST Number" formControlName="HospitalGst">
+      </div>
+  </div>
+  </div>  
+    <div class="  d-flex gap-2 p-2">
+      <button mat-dialog-close class="btn btn-white"  >Close</button>
+      <button type="submit" class="btn btn-success"  >Submit</button>
+    </div>
+    
+  </form> 
+
+
+
+
+
+
+
+
+
+
+</section>

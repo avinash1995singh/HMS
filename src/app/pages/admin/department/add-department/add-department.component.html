@@ -1,0 +1,39 @@
+
+
+    <section >
+        <div class="m-2 ">
+            <h4 class="modal-title">Add/Edit Department</h4>
+        </div>
+        <hr>
+        
+            
+            <form  [formGroup]="department" (ngSubmit)="saveDepartment()">
+                <div class="w-11/12 p-3 m-2">
+        <label for="exampleFormControlInput1" class="form-label">Department Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="name" >
+    </div>
+    
+    <hr>
+     <div class=" w-100 gap-2 d-flex justify-content-end p-2">
+        <button mat-dialog-close class="btn btn-white"  >Close</button>
+        <button type="submit" class="btn btn-success"  >Submit</button>
+    </div>
+
+        </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

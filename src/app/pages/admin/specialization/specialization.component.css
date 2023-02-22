@@ -1,0 +1,15 @@
+.btn-primary{
+    color: #fff;
+        background-color: #348fe2;
+        border-color: #348fe2;
+        margin-left: calc(100% - 18%);
+}
+
+.table-heading{
+    background-color: #1b2221;
+    color: #fff;
+    padding: 8px;
+    font-size: large;
+    font-family: sans-serif;
+   
+  }

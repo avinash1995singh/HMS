@@ -1,0 +1,39 @@
+<button  (click)="openDialog()" class="btn btn-sm btn-primary">Add Service</button>
+<!-- <ngx-spinner type="square-loader"></ngx-spinner> -->
+<ngx-spinner bdColor = "rgba(0, 0, 0, .4)" size = "default" color = "black" type = "square-loader" [fullScreen] = "true"><p style="color: rgb(8, 1, 1)" >  </p></ngx-spinner>
+
+<select class="form-select w-50 m-4" aria-label="Default select example" (change)="getSericeData($event)" >
+  <option selected>Select Service</option>
+  <option *ngFor="let s of serviceGroup"  >{{s.servicename}}</option>
+</select>
+<div class="m-4">
+  <div class="table-heading">Services List</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Service Name">
+    <th mat-header-cell *matHeaderCellDef> Service Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.sName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Service Charge">
+    <th mat-header-cell *matHeaderCellDef> Service Charge </th>
+    <td mat-cell *matCellDef="let element"> {{element.sCharge}} </td>
+  </ng-container>
+  <ng-container matColumnDef="Action">
+    <th mat-header-cell *matHeaderCellDef>Action </th>
+    <td mat-cell *matCellDef="let element"> 
+      <button class="btn" (click)="edit(element)">Edit</button> 
+      <button class="btn" (click)="delete(element.name,element.id)">Delete</button> 
+     </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>
+

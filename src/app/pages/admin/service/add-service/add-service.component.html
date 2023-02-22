@@ -1,0 +1,47 @@
+
+
+    <section>
+        <div class="m-3">
+            <h4 class="modal-title">Add/Edit Service</h4>
+        </div>
+        <hr>
+        <form [formGroup]="service" (ngSubmit)="saveService()">
+            <div *ngIf="!dataSourse" class="w-11/12 p-2 m-2">
+                <label for="exampleFormControlInput1" class="form-label">Service Name</label>
+                <select class="form-select " aria-label="Default select example" formControlName="servicename" >
+                    <option selected>Service Name</option>
+                    <option *ngFor="let s of s_Group">{{s.servicename}}</option>
+                </select>
+            </div>
+    <div class="w-11/12 p-2 m-2">
+        <label for="exampleFormControlInput1" class="form-label">Service Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="sName" >
+    </div>
+    <div class="w-11/12 p-2 m-2">
+        <label for="exampleFormControlInput1" class="form-label">Service Charge</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="sCharge" >
+    </div>
+    
+    <div class=" w-100 gap-2 d-flex justify-content-end p-2">
+        <button  mat-dialog-close class="btn btn-white"  >Close</button>
+        <button type="submit" class="btn btn-success"  >Submit</button>
+    </div>
+
+</form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

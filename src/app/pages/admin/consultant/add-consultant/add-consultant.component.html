@@ -1,0 +1,193 @@
+<section class="hospital">
+  <h4 class="text-center modal-title">Consultant Details</h4>
+  <hr>
+  <form class="form-setup" [formGroup]="consultant" (ngSubmit)="saveConsultant()">
+    <div class="form-row">
+      <div class="d-flex gap-4">
+        <div class="form-group col-md-4">
+          <label for="inputCity" class="p-2">Doctor Name</label>
+          <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Doctor Name" formControlName="DoctorName">
+        </div>
+    <div class="form-group col-md-3">
+      <label for="inputState" class="p-2">Gender</label>
+      <select id="inputState" class="form-control form-control-sm" formControlName="Gender">
+        <option selected>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+ 
+    <div class="form-group col-md-3">
+      <label for="inputZip" class="p-2">Age</label>
+      <input type="text" class="form-control form-control-sm" id="inputZip" placeholder="Age" formControlName="age">
+    </div>
+  </div>
+ 
+  </div> 
+  <div class="form-row">
+    <div class="d-flex gap-3">  
+  <div class="form-group col-md-3">
+    <label for="inputState" class="p-2">Department</label>
+    <select id="inputState" class="form-control form-control-sm" formControlName="Department">
+      <option selected>-Select-</option>
+      <option *ngFor="let d of department">{{d.name}}</option>
+    </select>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="inputState" class="p-2">Desingnation</label>
+    <select id="inputState" class="form-control form-control-sm" formControlName="desingnation">
+      <option selected>-Select-</option>
+      <option *ngFor="let de of designation ">{{de.designation}}</option>
+    
+    </select>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="inputState" class="p-2">Specialization</label>
+    <select id="inputState" class="form-control form-control-sm" formControlName="Specialization">
+      <option selected>Select</option>
+      <option *ngFor="let s of specialization">{{s.specialization}}</option>
+     
+    </select>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="inputCity" class="p-2">Qualification</label>
+    <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Qualification" formControlName="Qualification">
+  </div>
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-4">  
+    <div class="form-group col-md-4">
+      <label for="inputCity" class="p-2">General Visit</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="General Visit" formControlName="GeneralVisit">
+    </div><div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Emergency Visit</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Emergency Visit" formControlName="EmergencyVisit">
+    </div>
+<div class="form-group col-md-3">
+  <label for="inputCity" class="p-2">Night Visit</label>
+  <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Night Visit" formControlName="NightVisit">
+</div>
+</div>
+</div>
+
+<div class="form-row">
+  <div class="d-flex gap-3">  
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">Reg Number</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Reg Number" formControlName="RegNumber">
+    </div><div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">DOJ</label>
+      <input type="date" class="form-control form-control-sm" id="inputCity" placeholder="DOJ" formControlName="DOJ">
+    </div><div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Apponitment Duration</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Apponitment Duration" formControlName="ApponitmentDuration">
+    </div>
+<div class="form-group col-md-3">
+  <label for="inputCity" class="p-2">OPD Chamb No</label>
+  <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="OPD Chamb No" formControlName="OPDChambNo">
+</div>
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-4">  
+    <div class="form-group col-md-4">
+      <label for="inputCity" class="p-2">Complate Address</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Complate Address" formControlName="complateAddress">
+    </div><div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Email</label>
+      <input type="email" class="form-control form-control-sm" id="inputCity" placeholder="Email" formControlName="Email">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Mobile</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Mobile" formControlName="Mobile">
+    </div>
+</div>
+</div>
+<div class="form-row">
+  <div class="d-flex gap-3">  
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">Emg. Contact</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="EmgContact" formControlName="EmgContact">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputCity" class="p-2">OPD Timing</label>
+      <input type="email" class="form-control form-control-sm" id="inputCity" placeholder="OPD Timing" formControlName="OPDTiming">
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="inputCity" class="p-2">Emg. Contact</label>
+      <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="EmgContact" formControlName="EmgContact">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputCity" class="p-2">Status</label>
+      <div class="radio-inline ">
+        <input id="gender" type="radio" name="genderControl" value="Active" formControlName="status" />
+        <label class="radio-label" class="p-2"> Active</label>
+        <input id="gender" type="radio" name="genderControl" value="De-Active" formControlName="status" />
+        <label class="radio-label" class="p-2">De-Active</label>
+      </div>
+    </div>
+   
+</div>
+</div>
+
+  
+      <div class="  d-flex gap-3 p-2">
+        <button mat-dialog-close class="btn btn-white"  >Close</button>
+        <button type="submit" class="btn btn-success"  >Submit</button>
+      </div>
+      
+    </form> 
+  
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
