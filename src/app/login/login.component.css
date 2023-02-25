@@ -1,0 +1,120 @@
+.account-content {
+	padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+.account-page {
+	align-items: center ;
+	display: flex;
+}
+.account-page .main-wrapper {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.account-title {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.account-subtitle {
+    color: #4c4c4c;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.account-box {
+	background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    overflow: hidden;
+    width: 480px;
+}
+.account-wrapper {
+	padding: 30px;
+}
+.account-logo {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.company-logo {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.company-logo img {
+  width: 100px;
+}
+.account-box .form-group {
+	margin-bottom: 25px;
+}
+.account-box .account-btn {
+	background: #69f43b;
+	background: -moz-linear-gradient(left, #17ae28 0%, #7b7891 100%);
+	background: -webkit-linear-gradient(left, #17ae28 0%, #453a94 100%);
+	background: -ms-linear-gradient(left, #17ae28 0%, #453a94 100%);
+	background: linear-gradient(to right, #17ae28 0%, #453a94 100%);
+	border: 0;
+    border-radius: 4px;
+    display: block;
+	font-size: 22px;
+	padding: 10px 26px;
+    width: 100%;
+}
+.account-box .account-btn:hover,
+.account-box .account-btn:focus {
+	border: 0;
+	opacity: 0.8;
+}
+.account-box .form-control {
+    background-color: #fbfbfb;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    height: 46px;
+}
+.account-box label {
+	color: #1f1f1f;
+	font-size: 16px;
+	font-weight: normal;
+    margin-bottom: 5px;
+}
+.account-logo img {
+	width: 100px;
+}
+.account-footer {
+    text-align: center;
+}
+.account-footer p {
+    margin-bottom: 0;
+}
+.account-footer a {
+	color: #f43b48;
+}
+.account-footer a:hover {
+	color: #f43b48;
+}
+.account-box .form-control.is-invalid,.account-box .was-validated .form-control:invalid {
+	border-color: rgb(220, 53, 69);
+}
+.toggle-password {
+	cursor: pointer;
+    margin-right: 1px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.is-invalid+.toggle-password {
+    display: none;
+}
+.mandatory {
+    margin-left: 5px;
+    color: red;
+}
+
