@@ -9,6 +9,7 @@ import { IPDModule } from './ipd/ipd.module';
 import { AdminModule } from './admin/admin.module';
 import { BillsModule } from './bills/bills.module';
 import { SharedModule } from '../shared/shared.module';
+import { ProfileModule } from './profile/profile.module';
 
 
 
@@ -18,7 +19,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule,ReportsModule,OPDModule,IPDModule,AdminModule,BillsModule,SharedModule
+    PagesRoutingModule,ProfileModule,ReportsModule,OPDModule,IPDModule,AdminModule,BillsModule,SharedModule
   ]
 })
 export class PagesModule { }
