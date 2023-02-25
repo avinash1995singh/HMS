@@ -11,7 +11,6 @@ export class AdminComponent {
 
 
   ngOnInIt(){
-    console.log("hnbbv")
     this.spinner.show("loading");
   }
 
