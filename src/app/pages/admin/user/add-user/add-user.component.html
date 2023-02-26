@@ -1,1 +1,48 @@
-<p>add-user works!</p>
+
+
+<section>
+    <div class="m-3">
+        <h4 class="modal-title">Add/Edit User</h4>
+    </div>
+    <hr>
+    <form [formGroup]="user" (ngSubmit)="saveUser()">
+        <div class="w-11/12 p-2 m-2">
+            <label for="exampleFormControlInput1" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="userName" >
+        </div>
+        <div class="w-11/12 p-2 m-2">
+            <label for="exampleFormControlInput1" class="form-label">User Id</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="userId" >
+        </div>
+<div class="w-11/12 p-2 m-2">
+    <label for="exampleFormControlInput1" class="form-label"> Password</label>
+    <input type="password" class="form-control" id="exampleFormControlInput1" formControlName="password" >
+</div>
+<div class="w-11/12 p-2 m-2">
+    <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleFormControlInput1" formControlName="confirmPassword" >
+</div>
+
+<div class=" w-100 gap-2 d-flex justify-content-end p-2">
+    <button  mat-dialog-close class="btn btn-white"  >Close</button>
+    <button type="submit" class="btn btn-success"  >Submit</button>
+</div>
+
+</form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+section{
+    height: 410px;
+    width: 700px;
+}
+.modal-title{
+    color: rgb(78, 72, 72);
+    font-weight: 700;
+}
+.btn-success{
+    color: #fff;
+    background-color: #00acac;
+    border-color: #00acac;
+}
+.btn-white{
+    color: #212529;
+    background-color: #fff;
+    border-color: #d5dbe0;
+}

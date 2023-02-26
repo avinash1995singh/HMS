@@ -1,1 +1,69 @@
-<p>user works!</p>
+<button  (click)="openDialog()" class="btn btn-sm btn-primary">Add User</button>
+<!-- <ngx-spinner type="square-loader"></ngx-spinner> -->
+<ngx-spinner bdColor = "rgba(0, 0, 0, .4)" size = "default" color = "black" type = "square-loader" [fullScreen] = "true"><p style="color: rgb(8, 1, 1)" >  </p></ngx-spinner>
+
+
+
+<div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-3">
+        <div class="roles-menu">
+            <ul>
+                <li [ngClass]="{ 'active' : i === 0  }"*ngFor="let roles of allUser;let i = index" >
+                    <a >{{roles.userName}}
+                        <span class="role-action">
+                            <span class="action-circle large" data-bs-toggle="modal" data-bs-target="#edit_role" (click)="edit(roles.id)">
+                                <i class="material-icons">edit</i>
+                            </span>
+                            <span class="action-circle large delete-btn" data-bs-toggle="modal"
+                                data-bs-target="#delete_role" >
+                                <i class="material-icons">delete</i>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <div class="col-sm-8 col-md-8 col-lg-8 col-xl-9">
+        <h6 class="card-title m-b-20">Module Access</h6>
+        <div class="m-b-30">
+            <ul class="list-group notification-list d-flex">
+                <li class="list-group-item" *ngFor="let module of allRole;let i = index">
+                    {{module.moduleName}}
+                    <div class="status-toggle">
+                        <input type="checkbox" id="staff_module"  class="check">
+                        <label for="staff_module" class="checktoggle">checkbox</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped custom-table">
+                <thead>
+                    <tr>
+                        <th>Module Permission</th>
+                        <th class="text-center">Create</th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">Delete</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let permission of allRole; let i= index">
+                        <td>{{permission.moduleName}}</td>
+                        <td class="text-center">
+                            <input type="checkbox" [checked]="permission.isCreat">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox" [checked]="permission.isEdit">
+                        </td>
+                        <td class="text-center">
+                            <input type="checkbox" [checked]="permission.isDelete">
+                        </td>
+                        
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</div>
+
