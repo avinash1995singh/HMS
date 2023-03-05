@@ -4,25 +4,34 @@ mat-sidenav-container{
   }
   mat-sidenav{
   width: 200px;  
-  color:bisque;
-  background-color: #c9edc9;
+  color:white;
+  background-color: #34444c;
 }
 .navbar{
   justify-content: space-between;
+}
+a{
+  color: white;
 }
 .space{
   padding-left: 2rem;
 }
 mat-grid-tile {
-  background: lightblue;
+  background: rgb(11, 78, 100);
 }
 mat-grid-list{
   margin: 4rem;
+ background-color: red;
 }
 mat-sidenav-content{
 background-color: #d3d0d0;
 }
 mat-toolbar{
-  background-color: #1b2221;
+  background: #69f43b;
+	background: -moz-linear-gradient(left, #17ae28 0%, #7b7891 100%);
+	background: -webkit-linear-gradient(left, #17ae28 0%, #453a94 100%);
+	background: -ms-linear-gradient(left, #17ae28 0%, #453a94 100%);
+	background: linear-gradient(to right, #17ae28 0%, #453a94 100%);
   color: #d3d0d0;
 }
+
